@@ -4,7 +4,7 @@ const factor = (data) => {
     getFactor = (data.timeToElapse * 1) / 3;
   } else if (data.periodType === 'weeks') {
     getFactor = (data.timeToElapse * 7) / 3;
-  } else if (data.periodType === 'months') {
+  } else if (data.months === 'months') {
     getFactor = (data.timeToElapse * 30) / 3;
   } else {
     getFactor = 0;
@@ -16,12 +16,12 @@ const factor = (data) => {
 const covid19ImpactEstimator = (data) => ({
   data,
   impact: {
-    currentlyInfected: data.reportedCase * 10,
-    infectionsByRequestedTime: (data.reportedCase * 10) * (2 ** factor(data))
+    currentlyInfected: data.reportedCases * 10,
+    infectionsByRequestedTime: (data.reportedCases * 10) * (2 ** factor(data))
   },
-  suvereImpact: {
-    currentlyInfected: data.reportedCase * 50,
-    infectionsByRequestedTime: (data.reportedCase * 50) * (2 ** factor(data))
+  severeImpact: {
+    currentlyInfected: data.reportedCases * 50,
+    infectionsByRequestedTime: (data.reportedCases * 50) * (2 ** factor(data))
   }
 });
 
