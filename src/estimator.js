@@ -19,7 +19,7 @@ const covid19ImpactEstimator = (data) => ({
   },
   suvereImpact: {
     currentlyInfected: data.reportedCase * 50,
-    infectionsByRequestedTime: (data.reportedCase * 10) * (2 ** factor(data))
+    infectionsByRequestedTime: (data.reportedCase * 50) * (2 ** factor(data))
   }
 });
 
