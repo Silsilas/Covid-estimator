@@ -4,6 +4,8 @@ const factor = (data) => {
     getFactor = (data.timeToElapse * 1) / 3;
   } else if (data.periodType === 'weeks') {
     getFactor = (data.timeToElapse * 7) / 3;
+  } else if (data.periodType === 'months') {
+    getFactor = (data.timeToElapse * 30) / 3;
   } else {
     getFactor = 0;
   }
