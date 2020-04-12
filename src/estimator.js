@@ -1,6 +1,6 @@
 const factor = (data) => {
   let getFactor;
-  if (data.periodType === 'day') {
+  if (data.periodType === 'days') {
     getFactor = (data.timeToElapse * 1) / 3;
   } else if (data.periodType === 'weeks') {
     getFactor = (data.timeToElapse * 7) / 3;
